@@ -16,6 +16,8 @@ public:
   GPIO(volatile uint32_t* addr) : reg(addr) {}
   void mode(Mode mode) { reg[Reg_IOSEL] = mode; }
   void write(uint32_t val) { reg[Reg_OUT] = val; }
+  void out_mode() { reg[Reg_IOSEL] = Mode::OUT; }
+  void in_mode() { reg[Reg_IOSEL] = Mode::IN; }
   void on() { write(1); }
   void off() { write(0); }
   uint32_t read() { return reg[Reg_IN]; }
