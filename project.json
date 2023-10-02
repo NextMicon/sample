@@ -4,7 +4,7 @@
     "repo": "https://raw.githubusercontent.com/Next-MICON/template/main/TinyFPGA_BX/template.json",
     "params": []
   },
-  "packages": [
+  "packs": [
     {
       "name": "GPIO"
     },
@@ -20,50 +20,32 @@
     {
       "name": "led",
       "direct": "out",
-      "position": [
-        360,
-        160
-      ],
+      "position": [360, 160],
       "text": "left"
     }
   ],
   "instances": [
     {
       "name": "serial",
-      "package": "UART",
-      "position": [
-        0,
-        20
-      ]
+      "pack": "UART",
+      "position": [0, 20]
     },
     {
       "name": "led",
-      "package": "GPIO",
-      "position": [
-        0,
-        120
-      ]
+      "pack": "GPIO",
+      "position": [0, 120]
     },
     {
       "name": "pwm",
-      "package": "PWM",
-      "position": [
-        0,
-        240
-      ]
+      "pack": "PWM",
+      "position": [0, 240]
     }
   ],
   "wires": [
     {
       "width": 1,
-      "from": [
-        "led",
-        "OUT"
-      ],
-      "to": [
-        "iopin",
-        "led"
-      ],
+      "from": ["led", "OUT"],
+      "to": ["iopin", "led"],
       "path": []
     }
   ]

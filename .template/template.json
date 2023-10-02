@@ -1,4 +1,19 @@
 {
-  "pin": ["led", "pin1", "pin1", "pin2", "pin3", "pin4", "pin5", "pin6", "pin7", "pin8", "pin9"],
+  "addr": {
+    "base": 1
+  },
+  "pin": [
+    "led",
+    "pin1",
+    "pin1",
+    "pin2",
+    "pin3",
+    "pin4",
+    "pin5",
+    "pin6",
+    "pin7",
+    "pin8",
+    "pin9"
+  ],
   "irq": ["irq0", "irq1", "irq2"]
 }
