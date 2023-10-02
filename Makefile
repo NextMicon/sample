@@ -10,15 +10,6 @@ upload: hardware software
 	"tinyprog -p \$$env:WSLHome\my-micon\src\.build\hardware.bin \
 	          -u \$$env:WSLHome\my-micon\src\.build\software.bin"
 
-gen: hardware/hardware.v firmware/firmware.hpp firmware/firmware.cpp
-	micon read -m micon.mcl
-hardware/hardware.v: micon.mcl
-	micon gen-hard -t $@ -m $^ -o $@
-firmware/firmware.hpp: micon.mcl
-	micon gen-firm -t $@ -m $^ -o $@
-firmware/firmware.cpp: micon.mcl
-	micon gen-firm -t $@ -m $^ -o $@
-
 hardware: .build/hardware.bin
 .build/hardware.json: $(HARDWARE)
 	yosys -ql $@.log -p 'synth_ice40 -top hardware -json $@' $^

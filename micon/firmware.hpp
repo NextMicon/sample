@@ -1,9 +1,9 @@
 #include "cpu.hpp"
 #include "spirom/ROM_CFG.hpp"
 /* includes */
-#include "UART"
-#include "GPIO"
-#include "PWM"
+#include "GPIO/GPIO.hpp"
+#include "PWM/PWM.hpp"
+#include "UART/UART.hpp"
 /* end */
 
 extern ROM_CFG rom_cfg;
