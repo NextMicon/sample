@@ -1,0 +1,6 @@
+<svg viewBox='0 0 160 1000' stroke='black' stroke-width='4'>
+    <polyline points='0,20 40,20' />
+    <polyline points='0,60 40,60' />
+    <polyline points='0,100 40,100' />
+    <polyline points='80,60 120,60' />
+</svg>

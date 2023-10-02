@@ -1,0 +1,80 @@
+{
+  "name": "TriState",
+  "pins": {
+    "IN": {
+      "type": "input",
+      "width": 1,
+      "position": [
+        0,
+        20
+      ],
+      "alignment": {
+        "horizontal": "right",
+        "vertical": "up"
+      },
+      "textPosition": [
+        0,
+        -5
+      ]
+    },
+    "OUT": {
+      "type": "input",
+      "width": 1,
+      "position": [
+        0,
+        40
+      ],
+      "alignment": {
+        "horizontal": "right",
+        "vertical": "up"
+      },
+      "textPosition": [
+        0,
+        -5
+      ]
+    },
+    "SEL": {
+      "type": "input",
+      "width": 1,
+      "position": [
+        0,
+        60
+      ],
+      "alignment": {
+        "horizontal": "right",
+        "vertical": "up"
+      },
+      "textPosition": [
+        0,
+        -5
+      ]
+    },
+    "IO": {
+      "type": "inout",
+      "width": 1,
+      "position": [
+        100,
+        40
+      ],
+      "alignment": {
+        "horizontal": "left",
+        "vertical": "up"
+      },
+      "textPosition": [
+        0,
+        -5
+      ]
+    }
+  },
+  "ports": {},
+  "parameters": {
+    "N": {}
+  },
+  "visual": {
+    "size": [
+      100,
+      60
+    ],
+    "svg": "<polyline points='0,20 70,20 70,40' fill='none'/><polyline points='0,40 40,40' /><polyline points='0,60 50,60 50,40' fill='none'/><polyline points='60,40 100,40' /><polyline points='60,40 40,50 40,30 60,40' />"
+  }
+}
