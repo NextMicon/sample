@@ -99,7 +99,7 @@ module spiflash (
   reg [7:0] memory[0:16*1024*1024-1];
 
   initial begin
-    $readmemh("build/simu_flash.hex", memory);
+    $readmemh(".build/simu_flash.hex", memory);
   end
 
   task spi_action;

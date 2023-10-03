@@ -84,7 +84,7 @@ module hardware (
   wire [31:0] mem_addr;
   wire [31:0] mem_wdata;
   wire [31:0] mem_rdata;
-  assign mem_ready = |{ram_ready, rom_ready, rom_cfg_ready,
+  assign mem_ready = |{ram_ready, rom_ready, rom_cfg_ready
 /* mem_ready */
 
 /* end */};

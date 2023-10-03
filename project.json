@@ -21,10 +21,7 @@
   "irqs": [
     {
       "name": "irq3",
-      "position": [
-        300,
-        400
-      ],
+      "position": [300, 400],
       "text": "left"
     }
   ],
@@ -32,37 +29,25 @@
     {
       "name": "pin1",
       "type": "input",
-      "position": [
-        240,
-        40
-      ],
+      "position": [240, 40],
       "text": "left"
     },
     {
       "name": "pin2",
       "type": "output",
-      "position": [
-        240,
-        60
-      ],
+      "position": [240, 60],
       "text": "left"
     },
     {
       "name": "led",
       "type": "output",
-      "position": [
-        240,
-        160
-      ],
+      "position": [240, 160],
       "text": "left"
     },
     {
       "name": "pin11",
       "type": "output",
-      "position": [
-        100,
-        400
-      ],
+      "position": [100, 400],
       "text": "right"
     }
   ],
@@ -70,87 +55,48 @@
     {
       "name": "serial",
       "pack": "UART",
-      "position": [
-        0,
-        20
-      ]
+      "position": [0, 20]
     },
     {
       "name": "led",
       "pack": "GPIO",
-      "position": [
-        0,
-        120
-      ]
+      "position": [0, 120]
     },
     {
       "name": "pwm",
       "pack": "PWM",
-      "position": [
-        0,
-        240
-      ]
+      "position": [0, 240]
     }
   ],
   "wires": [
     {
       "width": 1,
-      "from": [
-        "led",
-        "OUT"
-      ],
-      "to": [
-        "iopin",
-        "led"
-      ],
+      "from": ["led", "OUT"],
+      "to": ["iopin", "led"],
       "path": []
     },
     {
       "width": 1,
-      "from": [
-        "iopin",
-        "pin11"
-      ],
-      "to": [
-        "irq",
-        "irq3"
-      ],
+      "from": ["iopin", "pin11"],
+      "to": ["irq", "irq3"],
       "path": []
     },
     {
       "width": 1,
-      "from": [
-        "led",
-        "OUT"
-      ],
-      "to": [
-        "iopin",
-        "led"
-      ],
+      "from": ["led", "OUT"],
+      "to": ["iopin", "led"],
       "path": []
     },
     {
       "width": 1,
-      "from": [
-        "serial",
-        "RX"
-      ],
-      "to": [
-        "iopin",
-        "pin1"
-      ],
+      "from": ["serial", "RX"],
+      "to": ["iopin", "pin1"],
       "path": []
     },
     {
       "width": 1,
-      "from": [
-        "iopin",
-        "pin2"
-      ],
-      "to": [
-        "serial",
-        "TX"
-      ],
+      "from": ["iopin", "pin2"],
+      "to": ["serial", "TX"],
       "path": []
     }
   ]

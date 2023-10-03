@@ -1,7 +1,7 @@
 #include "firmware.hpp"
 
 void init() {
-  gpio_blink(gpio);
+  gpio_blink(led);
 }
 
 void loop() {}
