@@ -1,4 +1,5 @@
 {
+  "files": ["firmware.hpp", "firmware.cpp", "hardware.v"],
   "addr": {
     "base": 1
   },
@@ -15,5 +16,5 @@
     "pin8",
     "pin9"
   ],
-  "irq": ["irq0", "irq1", "irq2"]
+  "irq": ["irq0", "irq1", "irq2", "irq3"]
 }

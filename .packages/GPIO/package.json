@@ -1,5 +1,14 @@
 {
   "name": "GPIO",
+  "author": "kanade-k-1228",
+  "hardware": "gpio",
+  "software": "GPIO",
+  "doc": [
+    "void out_mode()",
+    "void write(int)",
+    "void in_mode()",
+    "int read()"
+  ],
   "pins": {
     "OUT": {
       "type": "inout",
@@ -28,11 +37,5 @@
       80
     ],
     "svg": "<rect x='20' y='0' width='160' height='80' /><text x='100' y='40' fill='black' stroke='none' text-anchor='middle' alignment-baseline='middle' font-size='20'>GPIO</text><polyline points='180,40 200,40' />"
-  },
-  "doc": [
-    "void out_mode()",
-    "void write(int)",
-    "void in_mode()",
-    "int read()"
-  ]
+  }
 }

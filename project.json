@@ -6,46 +6,151 @@
   },
   "packs": [
     {
-      "name": "GPIO"
+      "name": "GPIO",
+      "repo": "https://raw.githubusercontent.com/Next-MICON/packages/main/gpio/gpio.json"
     },
     {
-      "name": "PWM"
+      "name": "PWM",
+      "repo": "https://raw.githubusercontent.com/Next-MICON/packages/main/pwm/pwm.json"
     },
     {
-      "name": "UART"
+      "name": "UART",
+      "repo": "https://raw.githubusercontent.com/Next-MICON/packages/main/uart/uart.json"
     }
   ],
-  "irqs": [],
+  "irqs": [
+    {
+      "name": "irq3",
+      "position": [
+        300,
+        400
+      ],
+      "text": "left"
+    }
+  ],
   "iopins": [
     {
-      "name": "led",
-      "direct": "out",
-      "position": [360, 160],
+      "name": "pin1",
+      "type": "input",
+      "position": [
+        240,
+        40
+      ],
       "text": "left"
+    },
+    {
+      "name": "pin2",
+      "type": "output",
+      "position": [
+        240,
+        60
+      ],
+      "text": "left"
+    },
+    {
+      "name": "led",
+      "type": "output",
+      "position": [
+        240,
+        160
+      ],
+      "text": "left"
+    },
+    {
+      "name": "pin11",
+      "type": "output",
+      "position": [
+        100,
+        400
+      ],
+      "text": "right"
     }
   ],
   "instances": [
     {
       "name": "serial",
       "pack": "UART",
-      "position": [0, 20]
+      "position": [
+        0,
+        20
+      ]
     },
     {
       "name": "led",
       "pack": "GPIO",
-      "position": [0, 120]
+      "position": [
+        0,
+        120
+      ]
     },
     {
       "name": "pwm",
       "pack": "PWM",
-      "position": [0, 240]
+      "position": [
+        0,
+        240
+      ]
     }
   ],
   "wires": [
     {
       "width": 1,
-      "from": ["led", "OUT"],
-      "to": ["iopin", "led"],
+      "from": [
+        "led",
+        "OUT"
+      ],
+      "to": [
+        "iopin",
+        "led"
+      ],
+      "path": []
+    },
+    {
+      "width": 1,
+      "from": [
+        "iopin",
+        "pin11"
+      ],
+      "to": [
+        "irq",
+        "irq3"
+      ],
+      "path": []
+    },
+    {
+      "width": 1,
+      "from": [
+        "led",
+        "OUT"
+      ],
+      "to": [
+        "iopin",
+        "led"
+      ],
+      "path": []
+    },
+    {
+      "width": 1,
+      "from": [
+        "serial",
+        "RX"
+      ],
+      "to": [
+        "iopin",
+        "pin1"
+      ],
+      "path": []
+    },
+    {
+      "width": 1,
+      "from": [
+        "iopin",
+        "pin2"
+      ],
+      "to": [
+        "serial",
+        "TX"
+      ],
       "path": []
     }
   ]

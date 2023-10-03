@@ -6,26 +6,17 @@ module hardware (
     inout  fpga_flash_io1,
     inout  fpga_flash_io2,
     inout  fpga_flash_io3,
-    /* iopin */
-    input  fpga_pin11,
-    input  fpga_pin2,
-    output fpga_pin1,
-    output fpga_user_led,
-    output fpga_pin24,
-    output fpga_pin23,
-    output fpga_pin22,
-    output fpga_pin21
-    /* end */
+/* iopin */
+    input pin1,
+    output pin2,
+    output led,
+    output pin11
+/* end */
 );
 
-  /* iopin_assign */
-  assign fpga_pin1 = serial_tx;
-  assign fpga_user_led = sel_out;
-  assign fpga_pin24 = dac_cs;
-  assign fpga_pin23 = dac_scl;
-  assign fpga_pin22 = dac_sdi;
-  assign fpga_pin21 = dac_ldac;
-  /* end */
+/* iobuffer */
+
+/* end */
 
   ///////////////////////////////////
   // Wire Deffinitions
@@ -41,8 +32,9 @@ module hardware (
   parameter [31:0] PROGADDR_RESET = 32'h0005_0000;  // 1 MB into flash
   parameter [31:0] PROGADDR_IRQ = 32'h0005_0010;  // 1 MB into flash
 
-  /* parameters */
-  /* end */
+/* parameters */
+
+/* end */
 
   ///////////////////////////////////
   // Interrupts Request
@@ -52,9 +44,9 @@ module hardware (
     if (!resetn) irq <= 0;
     else begin
       irq = 0;
-      /* irq */
-      irq[5] = fpga_pin11;
-      /* end */
+/* irq */
+      irq3 <= wire_name;
+/* end */
     end
   end
 
@@ -92,12 +84,14 @@ module hardware (
   wire [31:0] mem_addr;
   wire [31:0] mem_wdata;
   wire [31:0] mem_rdata;
-  assign mem_ready = |{ram_ready, rom_ready, rom_cfg_ready,  /* mem_ready */
-      serial_ready,gpio_ready,pwm_ready,sel_ready,square1_ready,square2_ready,square3_ready,sawtooth_ready,triangle_ready,mixier_ready,sampling_ready,dac_ready
-      /* end */};
-  assign mem_rdata = ram_ready ? ram_rdata : rom_ready ? rom_rdata : rom_cfg_ready ? rom_cfg_rdata /* mem_rdata */
-      : serial_ready ? serial_rdata : gpio_ready ? gpio_rdata : pwm_ready ? pwm_rdata : sel_ready ? sel_rdata : square1_ready ? square1_rdata : square2_ready ? square2_rdata : square3_ready ? square3_rdata : sawtooth_ready ? sawtooth_rdata : triangle_ready ? triangle_rdata : mixier_ready ? mixier_rdata : sampling_ready ? sampling_rdata : dac_ready ? dac_rdata
-      /* end */ : 32'b0;
+  assign mem_ready = |{ram_ready, rom_ready, rom_cfg_ready,
+/* mem_ready */
+
+/* end */};
+  assign mem_rdata = ram_ready ? ram_rdata : rom_ready ? rom_rdata : rom_cfg_ready ? rom_cfg_rdata
+/* mem_rdata */
+
+/* end */ : 32'b0;
 
   ///////////////////////////////////
   // Modules
@@ -199,7 +193,7 @@ module hardware (
       .out  (flash_io3_out)
   );
 
-  /* instances */
+/* instances */
 UART serial (
 
 );
