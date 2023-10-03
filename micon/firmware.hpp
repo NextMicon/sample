@@ -1,16 +1,14 @@
 #include "cpu.hpp"
 #include "spirom/ROM_CFG.hpp"
 /* includes */
-#include "UART/UART.hpp"
 #include "GPIO/GPIO.hpp"
-#include "PWM/PWM.hpp"
+#include "UART/UART.hpp"
 /* end */
 
 extern ROM_CFG rom_cfg;
 /* declarations */
-extern UART serial;
-extern GPIO led;
-extern PWM pwm;
+extern UART uart;
+extern GPIO gpio;
 /* end */
 
 void init();

@@ -5,8 +5,8 @@
       "includePath": [
         "${workspaceFolder}/**",
         "${workspaceFolder}/.packages/**",
-        "${workspaceFolder}/.common/**",
-        "${workspaceFolder}/micon/*"
+        "${workspaceFolder}/.template/cpu/**",
+        "${workspaceFolder}/micon"
       ],
       "defines": [],
       "compilerPath": "/usr/bin/clang",

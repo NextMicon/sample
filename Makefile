@@ -43,7 +43,10 @@ software: .build/software.objdump .build/software.nm .build/software.bin
 	$(CROSS)objcopy -O binary $^ /dev/stdout > $@
 
 upload: hardware software
-	tinyprog -p .build/hardware.bin -u .build/software.bin
+#	tinyprog -p .build/hardware.bin -u .build/software.bin
+	powershell.exe -c \
+	"tinyprog -p \$$env:WSLHome\Next-MICON\ide-sample\.build\hardware.bin \
+	          -u \$$env:WSLHome\Next-MICON\ide-sample\.build\software.bin"
 
 simu: wave
 
