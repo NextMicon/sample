@@ -1,21 +1,25 @@
 {
   "template": {
-    "name": "TinyFPGA-BX",
-    "repo": "https://raw.githubusercontent.com/Next-MICON/template/main/TinyFPGA_BX/template.json",
+    "name": "TinyFPGA-BX-PicoRV32",
+    "version": "0.0.0",
+    "repo": "https://github.com/Next-MICON/template/raw/main/TinyFPGA-BX-PicoRV32/TinyFPGA-BX-PicoRV32-0.0.0.zip",
     "params": []
   },
   "packs": [
     {
       "name": "GPIO",
-      "repo": "https://raw.githubusercontent.com/Next-MICON/packages/main/gpio/gpio.json"
+      "version": "0.0.0",
+      "repo": "https://github.com/Next-MICON/packages/raw/main/GPIO/0.0.0/GPIO-0.0.0.zip"
     },
     {
       "name": "PWM",
-      "repo": "https://raw.githubusercontent.com/Next-MICON/packages/main/pwm/pwm.json"
+      "version": "0.0.0",
+      "repo": "https://github.com/Next-MICON/packages/raw/main/PWM/0.0.0/PWM-0.0.0.zip"
     },
     {
       "name": "UART",
-      "repo": "https://raw.githubusercontent.com/Next-MICON/packages/main/uart/uart.json"
+      "version": "0.0.0",
+      "repo": "https://github.com/Next-MICON/packages/raw/main/UART/0.0.0/UART-0.0.0.zip"
     }
   ],
   "irqs": [

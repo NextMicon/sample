@@ -10,16 +10,13 @@ LINKER    = .template/cpu/sections.lds
 
 all: hardware software
 
-dev:
+install:
 	sudo apt update
 	sudo apt install gcc-riscv64-unknown-elf yosys nextpnr-ice40 iverilog gtkwave python3
-	pip install 
+	pip install tinyprog
 
 init:
 	mkdir -p .build micon
-
-install: $(MICON)
-	nm-cli install -m $^
 
 hardware: .build/hardware.bin
 .build/hardware.json: $(HARDWARE)
@@ -78,4 +75,4 @@ simu: wave
 wave: .build/simulation.vcd .build/simu_software.objdump .build/simu_software.nm
 	gtkwave .build/simulation.vcd
 
-.PHONY: all dev init install gen hardware software upload simu wave
+.PHONY: all init install gen hardware software upload simu wave

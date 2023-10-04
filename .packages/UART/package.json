@@ -1,5 +1,7 @@
 {
   "name": "UART",
+  "hardware": true,
+  "software": true,
   "pins": {
     "RX": {
       "type": "input",

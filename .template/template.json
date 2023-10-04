@@ -1,5 +1,10 @@
 {
   "files": ["firmware.hpp", "firmware.cpp", "hardware.v"],
+  "templates": [
+    [".template", "micon", "firmware.hpp"],
+    [".template", "micon", "firmware.cpp"],
+    [".template", "micon", "hardware.v"]
+  ],
   "addr": {
     "base": 1
   },
