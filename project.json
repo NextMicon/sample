@@ -27,6 +27,11 @@
       "name": "irq3",
       "position": [300, 400],
       "text": "left"
+    },
+    {
+      "name": "irq4",
+      "position": [300, 440],
+      "text": "right"
     }
   ],
   "iopins": [
@@ -39,7 +44,7 @@
     {
       "name": "pin2",
       "type": "output",
-      "position": [240, 60],
+      "position": [240, 80],
       "text": "left"
     },
     {
@@ -50,9 +55,27 @@
     },
     {
       "name": "pin11",
-      "type": "output",
-      "position": [100, 400],
+      "type": "input",
+      "position": [180, 400],
       "text": "right"
+    },
+    {
+      "name": "pin12",
+      "type": "output",
+      "position": [140, 440],
+      "text": "right"
+    },
+    {
+      "name": "pin13",
+      "type": "inout",
+      "position": [500, 300],
+      "text": "right"
+    },
+    {
+      "name": "pin14",
+      "type": "inout",
+      "position": [260, 300],
+      "text": "left"
     }
   ],
   "instances": [
