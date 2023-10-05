@@ -8,45 +8,30 @@
       "width": 1,
       "position": [
         200,
-        20
+        40
       ],
-      "alignment": {
-        "horizontal": "left",
-        "vertical": "center"
-      },
-      "textPosition": [
-        -24,
-        0
-      ]
+      "direct": "right"
     },
     "TX": {
       "type": "output",
       "width": 1,
       "position": [
         200,
-        40
+        80
       ],
-      "alignment": {
-        "horizontal": "left",
-        "vertical": "center"
-      },
-      "textPosition": [
-        -24,
-        0
-      ]
+      "direct": "right"
     }
   },
   "ports": {},
   "parameters": {
     "N": {}
   },
-  "visual": {
-    "size": [
-      200,
-      60
-    ],
-    "svg": "<rect x='20' y='0' width='160' height='60' /><text x='100' y='30' fill='black' stroke='none' text-anchor='middle' alignment-baseline='middle' font-size='20'>UART</text><polyline points='180,20 200,20' /><polyline points='180,40 200,40' />"
-  },
+  "size": [
+    180,
+    120
+  ],
+  "text": 50,
+  "path": "",
   "doc": [
     "UART& operator<<(char)",
     "UART& operator<<(const char*)",

@@ -8,27 +8,19 @@
         200,
         40
       ],
-      "alignment": {
-        "horizontal": "left",
-        "vertical": "center"
-      },
-      "textPosition": [
-        -24,
-        0
-      ]
+      "direct": "right"
     }
   },
   "ports": {},
   "parameters": {
     "N": {}
   },
-  "visual": {
-    "size": [
-      200,
-      80
-    ],
-    "svg": "<rect x='20' y='0' width='160' height='80' /><text x='100' y='40' fill='black' stroke='none' text-anchor='middle' alignment-baseline='middle' font-size='20'>PWM</text><polyline points='180,40 200,40' />"
-  },
+  "text": 50,
+  "size": [
+    180,
+    80
+  ],
+  "path": "",
   "doc": [
     "void duty(int)"
   ]

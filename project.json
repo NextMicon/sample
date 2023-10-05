@@ -25,13 +25,8 @@
   "irqs": [
     {
       "name": "irq3",
-      "position": [300, 400],
+      "position": [240, 400],
       "text": "left"
-    },
-    {
-      "name": "irq4",
-      "position": [300, 440],
-      "text": "right"
     }
   ],
   "iopins": [
@@ -50,31 +45,19 @@
     {
       "name": "led",
       "type": "output",
-      "position": [240, 160],
+      "position": [240, 280],
       "text": "left"
     },
     {
       "name": "pin11",
       "type": "input",
-      "position": [180, 400],
-      "text": "right"
-    },
-    {
-      "name": "pin12",
-      "type": "output",
-      "position": [140, 440],
-      "text": "right"
-    },
-    {
-      "name": "pin13",
-      "type": "inout",
-      "position": [500, 300],
+      "position": [140, 400],
       "text": "right"
     },
     {
       "name": "pin14",
       "type": "inout",
-      "position": [260, 300],
+      "position": [240, 200],
       "text": "left"
     }
   ],
@@ -82,17 +65,17 @@
     {
       "name": "serial",
       "pack": "UART",
-      "position": [0, 20]
+      "position": [0, 0]
     },
     {
       "name": "led",
       "pack": "GPIO",
-      "position": [0, 120]
+      "position": [0, 140]
     },
     {
       "name": "pwm",
       "pack": "PWM",
-      "position": [0, 240]
+      "position": [0, 280]
     }
   ],
   "wires": [

@@ -3,39 +3,49 @@
   "author": "kanade-k-1228",
   "hardware": "gpio",
   "software": "GPIO",
-  "doc": [
-    "void out_mode()",
-    "void write(int)",
-    "void in_mode()",
-    "int read()"
-  ],
   "pins": {
-    "OUT": {
-      "type": "inout",
+    "IOSEL": {
+      "type": "output",
       "width": 1,
       "position": [
         200,
         40
       ],
-      "alignment": {
-        "horizontal": "left",
-        "vertical": "center"
-      },
-      "textPosition": [
-        -24,
-        0
-      ]
+      "direct": "right"
+    },
+    "OUT": {
+      "type": "output",
+      "width": 1,
+      "position": [
+        200,
+        60
+      ],
+      "direct": "right"
+    },
+    "IN": {
+      "type": "input",
+      "width": 1,
+      "position": [
+        200,
+        80
+      ],
+      "direct": "right"
     }
   },
   "ports": {},
   "parameters": {
     "N": {}
   },
-  "visual": {
-    "size": [
-      200,
-      80
-    ],
-    "svg": "<rect x='20' y='0' width='160' height='80' /><text x='100' y='40' fill='black' stroke='none' text-anchor='middle' alignment-baseline='middle' font-size='20'>GPIO</text><polyline points='180,40 200,40' />"
-  }
+  "size": [
+    180,
+    120
+  ],
+  "text": 50,
+  "path": "",
+  "doc": [
+    "void out_mode()",
+    "void write(int)",
+    "void in_mode()",
+    "int read()"
+  ]
 }
