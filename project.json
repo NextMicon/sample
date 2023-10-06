@@ -25,8 +25,8 @@
   "irqs": [
     {
       "name": "irq3",
-      "position": [240, 400],
-      "text": "left"
+      "position": [160, 440],
+      "text": "right"
     }
   ],
   "iopins": [
@@ -43,21 +43,27 @@
       "text": "left"
     },
     {
-      "name": "led",
+      "name": "pin3",
+      "type": "inout",
+      "position": [240, 200],
+      "text": "left"
+    },
+    {
+      "name": "led1",
       "type": "output",
       "position": [240, 280],
       "text": "left"
     },
     {
-      "name": "pin11",
-      "type": "input",
-      "position": [140, 400],
-      "text": "right"
+      "name": "led2",
+      "type": "output",
+      "position": [240, 360],
+      "text": "left"
     },
     {
-      "name": "pin14",
-      "type": "inout",
-      "position": [240, 200],
+      "name": "pin11",
+      "type": "input",
+      "position": [240, 440],
       "text": "left"
     }
   ],
@@ -75,7 +81,7 @@
     {
       "name": "pwm",
       "pack": "PWM",
-      "position": [0, 280]
+      "position": [0, 320]
     }
   ],
   "wires": [
@@ -94,9 +100,10 @@
     {
       "width": 1,
       "from": ["led", "OUT"],
-      "to": ["iopin", "led"],
+      "to": ["iopin", "led1"],
       "path": []
     },
+    { "width": 1, "from": ["pwm", "OUT"], "to": ["iopin", "led2"], "path": [] },
     {
       "width": 1,
       "from": ["serial", "RX"],

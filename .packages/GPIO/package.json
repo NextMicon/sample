@@ -18,7 +18,7 @@
       "width": 1,
       "position": [
         200,
-        60
+        80
       ],
       "direct": "right"
     },
@@ -27,7 +27,7 @@
       "width": 1,
       "position": [
         200,
-        80
+        120
       ],
       "direct": "right"
     }
@@ -38,7 +38,7 @@
   },
   "size": [
     180,
-    120
+    160
   ],
   "text": 50,
   "path": "",
