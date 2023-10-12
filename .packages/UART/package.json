@@ -1,44 +1,42 @@
 {
   "name": "UART",
-  "hardware": true,
-  "software": true,
-  "pins": {
-    "RX": {
-      "type": "input",
+  "url": "https://example.com",
+  "ports": [
+    {
+      "name": "RX",
+      "direct": "input",
       "width": 1,
       "position": [
         200,
         40
-      ],
-      "direct": "right"
+      ]
     },
-    "TX": {
-      "type": "output",
+    {
+      "name": "TX",
+      "direct": "output",
       "width": 1,
       "position": [
         200,
         80
-      ],
-      "direct": "right"
+      ]
     }
-  },
-  "ports": {},
-  "parameters": {
-    "N": {}
-  },
+  ],
+  "params": [],
   "size": [
     180,
     120
   ],
-  "text": 50,
-  "path": "",
-  "doc": [
-    "UART& operator<<(char)",
-    "UART& operator<<(const char*)",
-    "UART& operator<<(uint32_t)",
-    "void print(char)",
-    "void print(const char*)",
-    "void print(uint32_t)",
-    "char read()"
-  ]
+  "textX": 40,
+  "software": {
+    "className": "UART",
+    "api": [
+      "UART& operator<<(char)",
+      "UART& operator<<(const char*)",
+      "UART& operator<<(uint32_t)",
+      "void print(char)",
+      "void print(const char*)",
+      "void print(uint32_t)",
+      "char read()"
+    ]
+  }
 }

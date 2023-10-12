@@ -2,8 +2,7 @@
   "template": {
     "name": "TinyFPGA-BX-PicoRV32",
     "version": "0.0.0",
-    "repo": "https://github.com/Next-MICON/template/raw/main/TinyFPGA-BX-PicoRV32/TinyFPGA-BX-PicoRV32-0.0.0.zip",
-    "params": []
+    "repo": "https://github.com/Next-MICON/template/raw/main/TinyFPGA-BX-PicoRV32/TinyFPGA-BX-PicoRV32-0.0.0.zip"
   },
   "packs": [
     {
@@ -22,66 +21,36 @@
       "repo": "https://github.com/Next-MICON/packages/raw/main/UART/0.0.0/UART-0.0.0.zip"
     }
   ],
-  "irqs": [
-    {
-      "name": "irq3",
-      "position": [160, 440],
-      "text": "right"
-    }
-  ],
-  "iopins": [
-    {
-      "name": "pin1",
-      "type": "input",
-      "position": [240, 40],
-      "text": "left"
-    },
-    {
-      "name": "pin2",
-      "type": "output",
-      "position": [240, 80],
-      "text": "left"
-    },
-    {
-      "name": "pin3",
-      "type": "inout",
-      "position": [240, 200],
-      "text": "left"
-    },
-    {
-      "name": "led1",
-      "type": "output",
-      "position": [240, 280],
-      "text": "left"
-    },
-    {
-      "name": "led2",
-      "type": "output",
-      "position": [240, 360],
-      "text": "left"
-    },
-    {
-      "name": "pin11",
-      "type": "input",
-      "position": [240, 440],
-      "text": "left"
-    }
+  "ioports": [
+    { "name": "irq3", "type": "irq", "position": [160, 440] },
+    { "name": "pin1", "type": "in", "position": [240, 40], "flip": true },
+    { "name": "pin2", "type": "out", "position": [240, 80], "flip": true },
+    { "name": "pin3", "type": "inout", "position": [240, 200], "flip": true },
+    { "name": "led1", "type": "out", "position": [240, 280], "flip": true },
+    { "name": "led2", "type": "out", "position": [240, 360], "flip": true },
+    { "name": "pin11", "type": "in", "position": [240, 440] }
   ],
   "instances": [
     {
       "name": "serial",
       "pack": "UART",
-      "position": [0, 0]
+      "params": [],
+      "position": [0, 0],
+      "flip": false
     },
     {
       "name": "led",
       "pack": "GPIO",
-      "position": [0, 140]
+      "position": [0, 140],
+      "params": [],
+      "flip": false
     },
     {
       "name": "pwm",
       "pack": "PWM",
-      "position": [0, 320]
+      "position": [0, 320],
+      "params": [],
+      "flip": false
     }
   ],
   "wires": [
@@ -103,7 +72,12 @@
       "to": ["iopin", "led1"],
       "path": []
     },
-    { "width": 1, "from": ["pwm", "OUT"], "to": ["iopin", "led2"], "path": [] },
+    {
+      "width": 1,
+      "from": ["pwm", "OUT"],
+      "to": ["iopin", "led2"],
+      "path": []
+    },
     {
       "width": 1,
       "from": ["serial", "RX"],

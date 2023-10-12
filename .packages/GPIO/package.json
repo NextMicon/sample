@@ -1,51 +1,48 @@
 {
   "name": "GPIO",
-  "author": "kanade-k-1228",
-  "hardware": "gpio",
-  "software": "GPIO",
-  "pins": {
-    "IOSEL": {
-      "type": "output",
+  "url": "https://example.com",
+  "ports": [
+    {
+      "name": "IOSEL",
+      "direct": "output",
       "width": 1,
       "position": [
         200,
         40
-      ],
-      "direct": "right"
+      ]
     },
-    "OUT": {
-      "type": "output",
+    {
+      "name": "OUT",
+      "direct": "output",
       "width": 1,
       "position": [
         200,
         80
-      ],
-      "direct": "right"
+      ]
     },
-    "IN": {
-      "type": "input",
+    {
+      "name": "IN",
+      "direct": "input",
       "width": 1,
       "position": [
         200,
         120
-      ],
-      "direct": "right"
+      ]
     }
-  },
-  "ports": {},
-  "parameters": {
-    "N": {}
-  },
+  ],
+  "params": [],
   "size": [
     180,
     160
   ],
-  "text": 50,
-  "path": "",
-  "doc": [
-    "void out_mode()",
-    "void write(int)",
-    "void in_mode()",
-    "int read()"
-  ]
+  "textX": 40,
+  "software": {
+    "className": "GPIO",
+    "api": [
+      "void out_mode()",
+      "void write(int)",
+      "void in_mode()",
+      "int read()"
+    ]
+  }
 }

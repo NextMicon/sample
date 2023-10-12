@@ -1,27 +1,27 @@
 {
   "name": "PWM",
-  "pins": {
-    "OUT": {
-      "type": "inout",
+  "url": "https://example.com",
+  "ports": [
+    {
+      "name": "OUT",
+      "direct": "output",
       "width": 1,
       "position": [
         200,
         40
-      ],
-      "direct": "right"
+      ]
     }
-  },
-  "ports": {},
-  "parameters": {
-    "N": {}
-  },
-  "text": 50,
+  ],
+  "params": [],
   "size": [
     180,
     80
   ],
-  "path": "",
-  "doc": [
-    "void duty(int)"
-  ]
+  "textX": 40,
+  "software": {
+    "className": "PWM",
+    "api": [
+      "void duty(int)"
+    ]
+  }
 }
