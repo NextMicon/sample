@@ -22,13 +22,47 @@
     }
   ],
   "ioports": [
-    { "name": "irq3", "type": "irq", "position": [160, 440] },
-    { "name": "pin1", "type": "in", "position": [240, 40], "flip": true },
-    { "name": "pin2", "type": "out", "position": [240, 80], "flip": true },
-    { "name": "pin3", "type": "inout", "position": [240, 200], "flip": true },
-    { "name": "led1", "type": "out", "position": [240, 280], "flip": true },
-    { "name": "led2", "type": "out", "position": [240, 360], "flip": true },
-    { "name": "pin11", "type": "in", "position": [240, 440] }
+    {
+      "name": "irq3",
+      "type": "irq",
+      "position": [160, 440]
+    },
+    {
+      "name": "pin1",
+      "type": "in",
+      "position": [240, 40],
+      "flip": true
+    },
+    {
+      "name": "pin2",
+      "type": "out",
+      "position": [240, 80],
+      "flip": true
+    },
+    {
+      "name": "pin3",
+      "type": "inout",
+      "position": [240, 200],
+      "flip": true
+    },
+    {
+      "name": "led1",
+      "type": "out",
+      "position": [240, 280],
+      "flip": true
+    },
+    {
+      "name": "led2",
+      "type": "out",
+      "position": [240, 360],
+      "flip": true
+    },
+    {
+      "name": "pin11",
+      "type": "in",
+      "position": [240, 440],
+      "flip": true
+    }
   ],
   "instances": [
     {
@@ -57,37 +91,49 @@
     {
       "width": 1,
       "from": ["led", "OUT"],
-      "to": ["iopin", "led"],
+      "to": ["led1", "out"],
       "path": []
     },
     {
       "width": 1,
-      "from": ["iopin", "pin11"],
-      "to": ["irq", "irq3"],
-      "path": []
-    },
-    {
-      "width": 1,
-      "from": ["led", "OUT"],
-      "to": ["iopin", "led1"],
+      "from": ["pin11", "in"],
+      "to": ["irq3", "irq"],
       "path": []
     },
     {
       "width": 1,
       "from": ["pwm", "OUT"],
-      "to": ["iopin", "led2"],
+      "to": ["led2", "out"],
       "path": []
     },
     {
       "width": 1,
       "from": ["serial", "RX"],
-      "to": ["iopin", "pin1"],
+      "to": ["pin1", "in"],
       "path": []
     },
     {
       "width": 1,
-      "from": ["iopin", "pin2"],
+      "from": ["pin2", "out"],
       "to": ["serial", "TX"],
+      "path": []
+    },
+    {
+      "width": 1,
+      "from": ["led", "IOSEL"],
+      "to": ["pin3", "iosel"],
+      "path": []
+    },
+    {
+      "width": 1,
+      "from": ["led", "OUT"],
+      "to": ["pin3", "out"],
+      "path": []
+    },
+    {
+      "width": 1,
+      "from": ["pin3", "in"],
+      "to": ["led", "IN"],
       "path": []
     }
   ]
