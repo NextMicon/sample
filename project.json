@@ -85,6 +85,13 @@
       "position": [0, 320],
       "params": [],
       "flip": false
+    },
+    {
+      "name": "hoge",
+      "pack": "PWM",
+      "params": [],
+      "position": [0, 420],
+      "flip": true
     }
   ],
   "wires": [
