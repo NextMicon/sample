@@ -1,0 +1,39 @@
+{
+  "name": "AND",
+  "url": "https://example.com",
+  "ports": [
+    {
+      "name": "IN1",
+      "direct": "input",
+      "width": 1,
+      "position": [
+        -120,
+        -20
+      ]
+    },
+    {
+      "name": "IN2",
+      "direct": "input",
+      "width": 1,
+      "position": [
+        -120,
+        20
+      ]
+    },
+    {
+      "name": "OUT",
+      "direct": "output",
+      "width": 1,
+      "position": [
+        120,
+        0
+      ]
+    }
+  ],
+  "params": [],
+  "size": [
+    214,
+    160
+  ],
+  "textX": 0
+}
