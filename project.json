@@ -25,42 +25,63 @@
     {
       "name": "irq3",
       "type": "irq",
-      "position": [160, 440]
+      "position": [
+        160,
+        440
+      ]
     },
     {
       "name": "pin1",
       "type": "in",
-      "position": [240, 40],
+      "position": [
+        240,
+        40
+      ],
       "flip": true
     },
     {
       "name": "pin2",
       "type": "out",
-      "position": [240, 80],
+      "position": [
+        240,
+        80
+      ],
       "flip": true
     },
     {
       "name": "pin3",
       "type": "inout",
-      "position": [240, 200],
+      "position": [
+        240,
+        200
+      ],
       "flip": true
     },
     {
       "name": "led1",
       "type": "out",
-      "position": [240, 280],
+      "position": [
+        240,
+        280
+      ],
       "flip": true
     },
     {
       "name": "led2",
       "type": "out",
-      "position": [240, 360],
+      "position": [
+        240,
+        360
+      ],
       "flip": true
     },
     {
       "name": "pin11",
       "type": "in",
-      "position": [240, 440],
+      "position": [
+        240,
+        440
+      ],
       "flip": true
     }
   ],
@@ -69,20 +90,29 @@
       "name": "serial",
       "pack": "UART",
       "params": [],
-      "position": [0, 0],
+      "position": [
+        0,
+        0
+      ],
       "flip": false
     },
     {
       "name": "led",
       "pack": "GPIO",
-      "position": [0, 140],
+      "position": [
+        0,
+        140
+      ],
       "params": [],
       "flip": false
     },
     {
       "name": "pwm",
       "pack": "PWM",
-      "position": [0, 320],
+      "position": [
+        0,
+        320
+      ],
       "params": [],
       "flip": false
     },
@@ -90,57 +120,108 @@
       "name": "hoge",
       "pack": "PWM",
       "params": [],
-      "position": [0, 420],
+      "position": [
+        20,
+        520
+      ],
       "flip": true
     }
   ],
   "wires": [
     {
       "width": 1,
-      "from": ["led", "OUT"],
-      "to": ["led1", "out"],
+      "from": [
+        "led",
+        "OUT"
+      ],
+      "to": [
+        "led1",
+        "out"
+      ],
       "path": []
     },
     {
       "width": 1,
-      "from": ["pin11", "in"],
-      "to": ["irq3", "irq"],
+      "from": [
+        "pin11",
+        "in"
+      ],
+      "to": [
+        "irq3",
+        "irq"
+      ],
       "path": []
     },
     {
       "width": 1,
-      "from": ["pwm", "OUT"],
-      "to": ["led2", "out"],
+      "from": [
+        "pwm",
+        "OUT"
+      ],
+      "to": [
+        "led2",
+        "out"
+      ],
       "path": []
     },
     {
       "width": 1,
-      "from": ["serial", "RX"],
-      "to": ["pin1", "in"],
+      "from": [
+        "serial",
+        "RX"
+      ],
+      "to": [
+        "pin1",
+        "in"
+      ],
       "path": []
     },
     {
       "width": 1,
-      "from": ["pin2", "out"],
-      "to": ["serial", "TX"],
+      "from": [
+        "pin2",
+        "out"
+      ],
+      "to": [
+        "serial",
+        "TX"
+      ],
       "path": []
     },
     {
       "width": 1,
-      "from": ["led", "IOSEL"],
-      "to": ["pin3", "iosel"],
+      "from": [
+        "led",
+        "IOSEL"
+      ],
+      "to": [
+        "pin3",
+        "iosel"
+      ],
       "path": []
     },
     {
       "width": 1,
-      "from": ["led", "OUT"],
-      "to": ["pin3", "out"],
+      "from": [
+        "led",
+        "OUT"
+      ],
+      "to": [
+        "pin3",
+        "out"
+      ],
       "path": []
     },
     {
       "width": 1,
-      "from": ["pin3", "in"],
-      "to": ["led", "IN"],
+      "from": [
+        "pin3",
+        "in"
+      ],
+      "to": [
+        "led",
+        "IN"
+      ],
       "path": []
     }
   ]

@@ -7,8 +7,8 @@
       "direct": "input",
       "width": 1,
       "position": [
-        200,
-        40
+        120,
+        -20
       ]
     },
     {
@@ -16,17 +16,17 @@
       "direct": "output",
       "width": 1,
       "position": [
-        200,
-        80
+        120,
+        20
       ]
     }
   ],
   "params": [],
   "size": [
-    180,
-    120
+    214,
+    104
   ],
-  "textX": 40,
+  "textX": -50,
   "software": {
     "className": "UART",
     "api": [

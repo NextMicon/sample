@@ -7,17 +7,17 @@
       "direct": "output",
       "width": 1,
       "position": [
-        100,
+        120,
         0
       ]
     }
   ],
   "params": [],
   "size": [
-    174,
-    80
+    214,
+    64
   ],
-  "textX": -40,
+  "textX": -50,
   "software": {
     "className": "PWM",
     "api": [

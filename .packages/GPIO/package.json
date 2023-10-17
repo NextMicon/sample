@@ -7,8 +7,8 @@
       "direct": "output",
       "width": 1,
       "position": [
-        200,
-        40
+        120,
+        -40
       ]
     },
     {
@@ -16,8 +16,8 @@
       "direct": "output",
       "width": 1,
       "position": [
-        200,
-        80
+        120,
+        0
       ]
     },
     {
@@ -25,17 +25,17 @@
       "direct": "input",
       "width": 1,
       "position": [
-        200,
-        120
+        120,
+        40
       ]
     }
   ],
   "params": [],
   "size": [
-    180,
+    214,
     160
   ],
-  "textX": 40,
+  "textX": -50,
   "software": {
     "className": "GPIO",
     "api": [
