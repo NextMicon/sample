@@ -8,6 +8,76 @@
   "addr": {
     "base": 1
   },
+  "iopacks": [
+    {
+      "name": "in",
+      "ports": [
+        {
+          "name": "in",
+          "direct": "output",
+          "width": 1,
+          "position": [0, 0]
+        }
+      ],
+      "params": [],
+      "size": [100, 10],
+      "textX": -20
+    },
+    {
+      "name": "out",
+      "ports": [
+        {
+          "name": "out",
+          "direct": "input",
+          "width": 1,
+          "position": [0, 0]
+        }
+      ],
+      "params": [],
+      "size": [100, 10],
+      "textX": 10
+    },
+    {
+      "name": "inout",
+      "ports": [
+        {
+          "name": "iosel",
+          "direct": "input",
+          "width": 1,
+          "position": [0, -20]
+        },
+        {
+          "name": "out",
+          "direct": "input",
+          "width": 1,
+          "position": [0, 0]
+        },
+        {
+          "name": "in",
+          "direct": "output",
+          "width": 1,
+          "position": [0, 20]
+        }
+      ],
+      "params": [],
+      "size": [100, 10],
+      "textX": 10
+    },
+    {
+      "name": "irq",
+      "ports": [
+        {
+          "name": "irq",
+          "direct": "input",
+          "width": 1,
+          "position": [0, 0]
+        }
+      ],
+      "params": [],
+      "size": [100, 10],
+      "textX": 10
+    }
+  ],
   "ioports": [
     { "name": "led", "type": ["out"] },
     { "name": "pin1", "type": ["in", "out", "inout"] },

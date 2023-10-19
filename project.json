@@ -29,42 +29,42 @@
   "ioports": [
     {
       "name": "irq3",
-      "type": "irq",
+      "pack": "irq",
       "position": [160, 440]
     },
     {
       "name": "pin1",
-      "type": "in",
+      "pack": "in",
       "position": [240, 40],
       "flip": true
     },
     {
       "name": "pin2",
-      "type": "out",
+      "pack": "out",
       "position": [240, 80],
       "flip": true
     },
     {
       "name": "pin3",
-      "type": "inout",
+      "pack": "inout",
       "position": [240, 200],
       "flip": true
     },
     {
       "name": "led1",
-      "type": "out",
+      "pack": "out",
       "position": [240, 280],
       "flip": true
     },
     {
       "name": "led2",
-      "type": "out",
+      "pack": "out",
       "position": [240, 360],
       "flip": true
     },
     {
       "name": "pin11",
-      "type": "in",
+      "pack": "in",
       "position": [240, 440],
       "flip": true
     }
@@ -74,20 +74,20 @@
       "name": "serial",
       "pack": "UART",
       "params": [],
-      "position": [0, 0],
+      "position": [80, 60],
       "flip": false
     },
     {
       "name": "led",
       "pack": "GPIO",
-      "position": [0, 140],
+      "position": [80, 220],
       "params": [],
       "flip": false
     },
     {
       "name": "pwm",
       "pack": "PWM",
-      "position": [0, 320],
+      "position": [80, 360],
       "params": [],
       "flip": false
     }
