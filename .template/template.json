@@ -6,7 +6,7 @@
     [".template", "micon", "hardware.v"]
   ],
   "addr": {
-    "base": 1
+    "base": 2
   },
   "iopacks": [
     {
@@ -16,12 +16,12 @@
           "name": "in",
           "direct": "output",
           "width": 1,
-          "position": [0, 0]
+          "position": [60, 0]
         }
       ],
       "params": [],
-      "size": [100, 10],
-      "textX": -20
+      "size": [96, 36],
+      "textX": -14
     },
     {
       "name": "out",
@@ -30,52 +30,54 @@
           "name": "out",
           "direct": "input",
           "width": 1,
-          "position": [0, 0]
+          "position": [60, 0]
         }
       ],
       "params": [],
-      "size": [100, 10],
-      "textX": 10
+      "size": [96, 36],
+      "textX": -14
     },
     {
       "name": "inout",
       "ports": [
         {
           "name": "iosel",
+          "icon": "?",
           "direct": "input",
           "width": 1,
-          "position": [0, -20]
+          "position": [60, -20]
         },
         {
           "name": "out",
           "direct": "input",
           "width": 1,
-          "position": [0, 0]
+          "position": [60, 0]
         },
         {
           "name": "in",
           "direct": "output",
           "width": 1,
-          "position": [0, 20]
+          "position": [60, 20]
         }
       ],
       "params": [],
-      "size": [100, 10],
-      "textX": 10
+      "size": [96, 76],
+      "textX": -14
     },
     {
       "name": "irq",
       "ports": [
         {
           "name": "irq",
+          "icon": "!",
           "direct": "input",
           "width": 1,
-          "position": [0, 0]
+          "position": [60, 0]
         }
       ],
       "params": [],
-      "size": [100, 10],
-      "textX": 10
+      "size": [96, 36],
+      "textX": -14
     }
   ],
   "ioports": [

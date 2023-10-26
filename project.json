@@ -30,42 +30,42 @@
     {
       "name": "irq3",
       "pack": "irq",
-      "position": [160, 440]
+      "position": [100, 440]
     },
     {
       "name": "pin1",
       "pack": "in",
-      "position": [240, 40],
+      "position": [300, 40],
       "flip": true
     },
     {
       "name": "pin2",
       "pack": "out",
-      "position": [240, 80],
+      "position": [300, 80],
       "flip": true
     },
     {
       "name": "pin3",
       "pack": "inout",
-      "position": [240, 200],
+      "position": [300, 200],
       "flip": true
     },
     {
       "name": "led1",
       "pack": "out",
-      "position": [240, 280],
+      "position": [300, 280],
       "flip": true
     },
     {
       "name": "led2",
       "pack": "out",
-      "position": [240, 360],
+      "position": [300, 360],
       "flip": true
     },
     {
       "name": "pin11",
       "pack": "in",
-      "position": [240, 440],
+      "position": [300, 440],
       "flip": true
     }
   ],
